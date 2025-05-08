@@ -1,0 +1,13 @@
+services:
+  server:
+    image: golang:latest
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["go", "run", "."]
+    ports:
+      - "8080:8080"
+    environment:
+      - CONSUMER_KEY=${CONSUMER_KEY}
+      - CONSUMER_SECRET=${CONSUMER_SECRET}
+      - KAONAVI_BASE_URL=${KAONAVI_BASE_URL}

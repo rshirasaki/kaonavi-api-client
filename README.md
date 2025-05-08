@@ -1,0 +1,1 @@
+run `make start` and check the log of the container.
